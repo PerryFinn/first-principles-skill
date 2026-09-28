@@ -4,12 +4,14 @@ A compact Codex skill for testing important decisions against verified facts, ha
 
 ## Installation
 
+Install into `~/.agents/skills` to make the skill available across projects. For a project-only installation, use `.agents/skills` inside that repository instead. See the [official Codex skills documentation](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills).
+
 ### Copy
 
 ```bash
 git clone https://github.com/tt-a1i/first-principles-skill.git
-mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R first-principles-skill "${CODEX_HOME:-$HOME/.codex}/skills/"
+mkdir -p "$HOME/.agents/skills"
+cp -R first-principles-skill "$HOME/.agents/skills/"
 ```
 
 ### Symlink
@@ -17,8 +19,8 @@ cp -R first-principles-skill "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```bash
 mkdir -p "$HOME/skills"
 git clone https://github.com/tt-a1i/first-principles-skill.git "$HOME/skills/first-principles-skill"
-mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-ln -s "$HOME/skills/first-principles-skill" "${CODEX_HOME:-$HOME/.codex}/skills/first-principles-skill"
+mkdir -p "$HOME/.agents/skills"
+ln -s "$HOME/skills/first-principles-skill" "$HOME/.agents/skills/first-principles-skill"
 ```
 
 ## Usage
